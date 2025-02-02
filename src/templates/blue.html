@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://www.svgrepo.com/show/25140/rss.svg">
+    <style>
+    *{
+        color: #244774;
+    }
+    .entry {
+        word-wrap: break-word;
+        width: 95%;
+        border: 1px solid #0049e5;
+        box-shadow: 3px 3px 20px 10px #062152;
+        border-radius: 6px;
+        background-color: #0c142c;
+    }
+    code{display: block; white-space: pre-wrap; word-wrap: break-word;}
+
+    img{
+        width:100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .time{
+    background-color: #1a2c66;
+    border: 0;
+    border-radius: 3px;
+    font-size: larger;
+    }
+    </style>
+    <title>RSS Reader</title>
+</head>
+<body>
+    {% for entry in entries %}
+    <center>
+    <div class="entry">
+        <h3>{{ entry.title }}</h3>
+        <h4>{{ entry.author }}</h4>
+        <div>
+            {{ entry.summary | safe }}
+        </div>
+        <input readonly class="time" value="{{ entry.published }}"><br>
+        <a href="{{entry.link}}"> [Link] </a>
+    </center>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+</html>

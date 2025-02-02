@@ -1,0 +1,49 @@
+<link rel="icon" type="image/svg+xml" href="https://www.svgrepo.com/show/25140/rss.svg">
+<style>
+.rss_link {
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    width: 80px;
+    height: 40px;
+    font-size: larger;
+    background-color: cadetblue;
+    border-radius: 10px;
+    font-family: monospace;
+    font-weight: bold;
+}
+form{
+    justify-self: center;
+}
+
+#theme{
+    width: 100px;
+    text-align: center;
+    font-size: larger;
+    border-radius: 6px;
+    background-color: cadetblue;
+    font-weight: bold;
+}
+
+h1{
+    font-family: system-ui;
+    justify-self: anchor-center;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<form method="POST" action="/">
+    <h1 class="center"> RSS reader <img width="30px" src="https://www.svgrepo.com/show/25140/rss.svg"></h1>
+    <select id="theme" name="theme">
+        <option value="purple">Purple</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+      </select>
+      <br>
+	<input class="rss_link" value="" name="rss_link">
+	<input type="submit" value="Search">
+</form>
